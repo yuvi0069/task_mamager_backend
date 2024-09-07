@@ -80,7 +80,9 @@ app.get(
             const authtoken = jwt.sign(payload, JWT_TOKEN);
             console.log(authtoken);
            
-            res.redirect(`https://task-manager-frontend-gzxt.onrender.com//home`);
+            const redirectUrl = `https://task-manager-frontend-gzxt.onrender.com/home?token=${encodeURIComponent(authtoken)}`;
+            console.log("Redirecting to:", redirectUrl);
+            res.redirect(redirectUrl);
         } else {
             
             res.status(401).json({ success: false, msg: "Google sign-in failed" });
