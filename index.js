@@ -80,7 +80,7 @@ app.get(
             const authtoken = jwt.sign(payload, JWT_TOKEN);
             console.log(authtoken);
            
-            res.redirect(`http://localhost:3000/home?token=${authtoken}`);
+            res.redirect(`https://66dc4b7f2b43eb738a08469e--shiny-palmier-7ac366.netlify.app/home?token=${authtoken}`);
         } else {
             
             res.status(401).json({ success: false, msg: "Google sign-in failed" });
