@@ -1,5 +1,10 @@
-const mongoose=require ("mongoose");
-mongoose.connect("mongodb+srv://yuviabhi00:yuviabhi00@cluster0.264cezt.mongodb.net/");
+const mongoose = require('mongoose');
+require('dotenv').config();
+const mongoUri = process.env.MONGODB_URL;
+mongoose.connect(mongoUri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 const UserSchema=new mongoose.Schema({
     googleId: {
         type: String,
