@@ -64,7 +64,7 @@ app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]
 app.get(
     "/auth/google/callback",
     passport.authenticate("google", {
-        failureRedirect: "http://localhost:3000/signin",
+        failureRedirect: "https://66dc4b7f2b43eb738a08469e--shiny-palmier-7ac366.netlify.app/signin",
         session: false, 
     }),
     (req, res) => {
