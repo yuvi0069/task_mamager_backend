@@ -29,7 +29,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_KEY,
-    callbackURL: "/auth/google/callback",
+    callbackURL:  "https://task-manager-6ttv.onrender.com/auth/google/callback",
     scope:["profile","email"]
 }, async (accessToken, refreshToken, profile, done) => {
     try {
