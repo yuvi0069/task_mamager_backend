@@ -64,7 +64,7 @@ app.get("/auth/google",passport.authenticate("google",{scope:["profile","email"]
 app.get(
     "/auth/google/callback",
     passport.authenticate("google", {
-        failureRedirect: "https://66dc4b7f2b43eb738a08469e--shiny-palmier-7ac366.netlify.app/signin",
+        failureRedirect: "https://task-manager-frontend-gzxt.onrender.com//signin",
         session: false, 
     }),
     (req, res) => {
@@ -80,7 +80,7 @@ app.get(
             const authtoken = jwt.sign(payload, JWT_TOKEN);
             console.log(authtoken);
            
-            res.redirect(`https://66dc4b7f2b43eb738a08469e--shiny-palmier-7ac366.netlify.app/home?token=${authtoken}`);
+            res.redirect(`https://task-manager-frontend-gzxt.onrender.com//home?token=${authtoken}`);
         } else {
             
             res.status(401).json({ success: false, msg: "Google sign-in failed" });
