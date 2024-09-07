@@ -13,7 +13,7 @@ const app = express();
 require('dotenv').config()
 const JWT_TOKEN =process.env.JWT_TOKEN ;
 app.use(bodyParser.json());
-app.use(cors({origin: "https://your-netlify-domain.netlify.app", 
+app.use(cors({origin: "https://66dc4b7f2b43eb738a08469e--shiny-palmier-7ac366.netlify.app/", 
     credentials: true}));
 
 
