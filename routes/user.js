@@ -10,18 +10,7 @@ const route = express.Router();
 const JWT_TOKEN = 'yuviabhi0012';
 
 // Google OAuth routes
-route.get('/auth/google', passport.authenticate('google', {
-    scope: ['profile', 'email']
 
-}));
-
-route.get('/auth/google/callback', passport.authenticate('google', {
-   
-    failureRedirect: '/login'
-}), (req, res) => {
-    console.log("here")
-    res.redirect('https://task-manager-frontend-gzxt.onrender.com/home'); // Redirect to your desired page after successful login
-});
 // Existing sign-up route
 route.post("/signup", [
     body('name', 'Enter a valid name').isLength({ min: '5' }),
