@@ -80,7 +80,7 @@ app.get(
             const authtoken = jwt.sign(payload, JWT_TOKEN);
             console.log(authtoken);
            
-            const redirectUrl = `https://task-manager-frontend-gzxt.onrender.com/home?token=${encodeURIComponent(authtoken)}`;
+            const redirectUrl = `https://task-manager-frontend-gzxt.onrender.com/home?token=${(authtoken)}`;
             console.log("Redirecting to:", redirectUrl);
             res.redirect(redirectUrl);
         } else {

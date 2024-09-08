@@ -20,9 +20,8 @@ route.get('/auth/google/callback', passport.authenticate('google', {
     failureRedirect: '/login'
 }), (req, res) => {
     console.log("here")
-    res.redirect('http://localhost:3000/home'); // Redirect to your desired page after successful login
+    res.redirect('https://task-manager-frontend-gzxt.onrender.com/home'); // Redirect to your desired page after successful login
 });
-
 // Existing sign-up route
 route.post("/signup", [
     body('name', 'Enter a valid name').isLength({ min: '5' }),
